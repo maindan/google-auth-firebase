@@ -24,7 +24,7 @@ e aguarde a instalação das dependências finalizar.
 #### Configurar variáveis de ambiente
 
 Para que esse projeto funcione você precisará configurar as variáveis de ambiente:
-- crie uma arquivo com o nome ".env" dentro da pasta src
+- crie um arquivo com o nome ".env" dentro da pasta src
 - no arquivo crie duas variáveis:
 ```
 GOOGLE_API_ID=com o valor da api_id da sua aplicação firebase 
