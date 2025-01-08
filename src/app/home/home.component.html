@@ -1,0 +1,14 @@
+<div class="home-container">
+  <nav>
+    <span>Olá! {{this.user()?.displayName}}.</span>
+    <button (click)="logout()">Sair</button>
+  </nav>
+  <div class="user-container">
+    <section class="user-info">
+      <img [src]="user()?.photoURL" alt="">
+      <span><strong>Nome:</strong> {{user()?.displayName}}</span>
+      <span><strong>E-mail:</strong> {{user()?.email}}</span>
+      <span><strong>Telefone: </strong> {{user()?.phoneNumber?? 'Sem número registrado'}}</span>
+    </section>
+  </div>
+</div>
