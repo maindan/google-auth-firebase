@@ -1,27 +1,54 @@
-# Google-Auth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+# Google Auth com Firebase
 
-## Development server
+Buscando aprender como autenticar um usuário utilizando a sua conta google, criei esse projeto como forma de praticar o aprendizado e talvez ajudar algum outro estudante da área que esteja com dúvidas no assunto.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Gostaria de fazer um adendo para quem tem pouco conhecimento do assunto, não sou expert com sistemas de autenticação e esse projeto é puramente para fins acadêmicos, existem diversas outras formas de realizar autenticação e até outras bibliotecas que possam ser mais adequadas, como o OAuth2, o projeto em questão está utilizando o firebase do google (que é bem comum para uso em aplicações mobile e talvez seja mais útil caso esteja buscando essa aplicação) e recomendo que seja utilizado apenas para tirar alguma dúvida que possa ter em uma aplicação bem específica do firebase auth com Angular.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configurando firebase
 
-## Build
+Para utilizar esse projeto você precisará confirar sua conta google com o firebase, o primeiro link de referência possui um tutorial explicando como realizar essa configuração.
+## Utilização do projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Após realizar a configuração do firebase, faça o clone desse repositório em seu computador.
 
-## Running unit tests
+#### Instalação de dependências
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Abra o terminal na pasta principal do projeto e utilize o comando:
+```
+  npm install
+```
+e aguarde a instalação das dependências finalizar.
 
-## Running end-to-end tests
+#### Configurar variáveis de ambiente
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para que esse projeto funcione você precisará configurar as variáveis de ambiente:
+- crie uma arquivo com o nome ".env" dentro da pasta src
+- no arquivo crie duas variáveis:
+```
+GOOGLE_API_ID=com o valor da api_id da sua aplicação firebase 
+API_KEY=com a api key da sua aplicação firebase
+```
 
-## Further help
+Você pode pular essa etapa adicionando os valores em questão diretamente dentro do arquivo environment.development.ts utilizando os mesmos nomes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Buildando o projeto
+
+Caso tenha criado as variáveis através de variáveis de ambiente, ao iniciar o projeto utilize o seguinte comando:
+```
+node -r dotenv/config node.js; ng s
+```
+Caso tenha passado os valores diretamente no environment ou no app.config.ts, utilize:
+```
+ng s
+```
+
+
+## Referência
+ - [Angular 18 and Firebase](https://medium.com/@piotrkorowicki/angular-18-and-firebase-simplifying-user-authentication-a2c407370acc)
+ - [Deploy Angular Project in vercel with secret environment](https://medium.com/@lara.delrio333/deploy-an-angular-project-in-vercel-with-secret-environment-variables-74323925712d)
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
